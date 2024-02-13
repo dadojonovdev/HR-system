@@ -9,20 +9,20 @@
         <div>
           <label class="block text-sm font-medium leading-6 text-gray-900">Имя</label>
           <div class="mt-2">
-            <input id="login" name="login" type="text" required class="block w-full rounded-md border-0 py-2.5 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Введите имя">
+            <input type="text" required class="block w-full rounded-md border-0 py-2.5 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Введите имя">
           </div>
         </div>
         <div>
             <label class="block text-sm font-medium leading-6 text-gray-900">Фамилия</label>
             <div class="mt-2">
-              <input id="login" name="login" type="text" required class="block w-full rounded-md border-0 py-2.5 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Введите фамилия">
+              <input type="text" required class="block w-full rounded-md border-0 py-2.5 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Введите фамилия">
             </div>
         </div>
 
         <div>
             <label class="block text-sm font-medium leading-6 text-gray-900">Должность</label>
             <div class="mt-2">
-              <input id="login" name="login" type="text" required class="block w-full rounded-md border-0 py-2.5 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Введите должность">
+              <input type="text" required class="block w-full rounded-md border-0 py-2.5 pl-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Введите должность">
             </div>
         </div>
   
@@ -36,13 +36,13 @@
         </div>
   
         <div>
-          <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Войти</button>
+          <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Далее</button>
         </div>
       </form>
   
       <p class="mt-10 text-center text-sm text-gray-500">
-        Не зарегистрированы?
-        <a href="#" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Пройдите регистрацию</a>
+        Уже зарегистрированы?
+        <a routerLink="/login" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Пройдите авторизацию</a>
       </p>
     </div>
   </div>

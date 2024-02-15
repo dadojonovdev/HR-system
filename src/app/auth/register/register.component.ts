@@ -10,12 +10,17 @@ import { UserService } from '../../services/auth.service'
 export class RegisterComponent implements OnInit {
 
   user: User = new User('', '', '')
-
+  
   constructor(private authService: UserService) {}
-
-  ngOnInit(): void {}
-
+  
+  ngOnInit(): void {
+    console.log(this.user, 'user')
+  }
+  
+  
   onSubmit(){
+    console.log('submit');
+    
     this.authService.register(this.user).subscribe((res) => {
       console.log(res);
     })

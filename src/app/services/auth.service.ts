@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 import { User } from '../models/user.model';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,21 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  register(user: User){
+  register(user: User): Observable<any>{
     return this.http.post(`${this.baseUrl}/register`, user)
   }
+
+  setToken(token: string){
+    localStorage.setItem('authToken', token)
+  }
+
+  getToken(): string | null {
+    return localStorage.getItem('authToken')
+  }
+
+  removeToken(){
+    localStorage.removeItem('authToken')
+  }
+
+
 }

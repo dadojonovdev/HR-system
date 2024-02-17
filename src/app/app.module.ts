@@ -8,12 +8,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
+import { EmployeeCreateComponent } from './employees/employee-create/employee-create.component';
+import { EmployeeEditComponent } from './employees/employee-edit/employee-edit.component';
+import { EmployeeDetailsComponent } from './employees/employee-details/employee-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    EmployeeListComponent,
+    EmployeeCreateComponent,
+    EmployeeEditComponent,
+    EmployeeDetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,8 @@
 import { inject } from '@angular/core';
-import { CanActivateFn, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
+import { CanActivateFn, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
 import { UserService } from '../services/auth.service';
 
-const canActivateTeam: CanActivateFn = (
+const canActiveIsLogin: CanActivateFn = (
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot,
   ) => {
@@ -15,5 +15,27 @@ const canActivateTeam: CanActivateFn = (
         router.navigate(['/login']);
         return false;
       }
-  }; 
-  
+};
+
+
+const canActivateIsLogout: CanActivateFn = (
+  route: ActivatedRouteSnapshot,
+  state: RouterStateSnapshot,
+) => {
+  const userService = inject(UserService);
+  const router = inject(Router)
+
+  if (userService.isAuthenticated()) {
+    history.back()
+    return false
+  } else {
+    return true
+  }
+
+
+}
+
+
+
+
+export {canActiveIsLogin, canActivateIsLogout}

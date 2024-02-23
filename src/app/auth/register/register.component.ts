@@ -16,6 +16,8 @@ export class RegisterComponent implements OnInit {
   
   ngOnInit(): void {
     console.log(this.user, 'user')
+    console.log(this.authService.isAuthenticated());
+    
   }
   
   

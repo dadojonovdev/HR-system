@@ -4,13 +4,21 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
 import { canActiveIsLogin, canActivateIsLogout } from './guards/auth.guard'
+import { BasePageComponent } from './base-page/base-page.component';
 
 
 const routes: Routes = [
+  { 
+    path: 'home', 
+    component:  BasePageComponent,
+    children: [
+      {path: '', component: EmployeeListComponent}
+    ]
+  },
   { path: 'login', component: LoginComponent, canActivate: [canActivateIsLogout]},
   { path: 'register', component: RegisterComponent, canActivate: [canActivateIsLogout]},
-  { path: 'home', component:  EmployeeListComponent, canActivate: [canActiveIsLogin]},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: "**", component: EmployeeListComponent}
 ];
 
 @NgModule({

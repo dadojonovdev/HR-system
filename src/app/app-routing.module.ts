@@ -9,16 +9,15 @@ import { BasePageComponent } from './base-page/base-page.component';
 
 const routes: Routes = [
   { 
-    path: 'home', 
+    path: '', 
     component:  BasePageComponent,
     children: [
-      {path: '', component: EmployeeListComponent}
+      { path: '', component: EmployeeListComponent, canActivate: [canActiveIsLogin] }
     ]
   },
   { path: 'login', component: LoginComponent, canActivate: [canActivateIsLogout]},
   { path: 'register', component: RegisterComponent, canActivate: [canActivateIsLogout]},
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: "**", component: EmployeeListComponent}
+  { path: "**", component: BasePageComponent}
 ];
 
 @NgModule({

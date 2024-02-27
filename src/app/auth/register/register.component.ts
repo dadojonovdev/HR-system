@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
     
     this.authService.register(this.user).subscribe((response) => {
       this.authService.setToken(response.token)
-      this.router.navigate(['/home']);
+      this.router.navigate(['/']);
     })
   }
 

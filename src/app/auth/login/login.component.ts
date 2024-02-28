@@ -21,13 +21,11 @@ export class LoginComponent implements OnInit {
   }
   
   
-  onSubmit(){
-    console.log('submit');
-    
-    // this.authService.login(this.user).subscribe((response) => {
-    //   this.authService.setToken(response.token)
-    //   this.router.navigate(['/home']);
-    // })
+  logIn(){
+    this.authService.login(this.user).subscribe((response) => {
+      this.authService.setToken(response.token)
+      this.router.navigate(['/']);
+    })
   }
 
 }

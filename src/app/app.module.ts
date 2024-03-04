@@ -15,6 +15,7 @@ import { EmployeeDetailsComponent } from './employees/employee-details/employee-
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { BasePageComponent } from './base-page/base-page.component';
+import { TestPageComponent } from './test-page/test-page.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { BasePageComponent } from './base-page/base-page.component';
     NavbarComponent,
     SidebarComponent,
     BasePageComponent,
+    TestPageComponent,
   ],
   imports: [
     BrowserModule,

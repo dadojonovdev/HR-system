@@ -9,7 +9,8 @@ import { canActiveIsLogin, canActivateIsLogout } from './guards/auth.guard'
 import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
 
 import { BasePageComponent } from './base-page/base-page.component';
-import { TestPageComponent } from './test-page/test-page.component';
+
+import { DraftComponent } from './draft/draft.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,7 @@ const routes: Routes = [
     component:  BasePageComponent,
     children: [
       { path: '', component: EmployeeListComponent, canActivate: [canActiveIsLogin] },
-      { path: 'test', component:  TestPageComponent}
+      { path: 'draft', component:  DraftComponent}
     ]
   },
   { path: 'login', component: LoginComponent, canActivate: [canActivateIsLogout]},

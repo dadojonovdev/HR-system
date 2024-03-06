@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./draft.component.css']
 })
 export class DraftComponent {
+  columns = ['id', 'firstName', 'lastName', 'age']
 
+  rows = [
+    {id: 1, firstName: 'Далерчон', lastName: 'Дадочонов', age: 24},
+  ]
 }

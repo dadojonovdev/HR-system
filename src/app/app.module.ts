@@ -17,6 +17,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { BasePageComponent } from './base-page/base-page.component';
 import { DraftComponent } from './draft/draft.component';
 import { ModalComponent } from './shared/modal/modal.component';
+import { TableComponent } from './shared/table/table.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ModalComponent } from './shared/modal/modal.component';
     BasePageComponent,
     DraftComponent,
     ModalComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,
